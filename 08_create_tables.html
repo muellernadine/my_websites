@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="author" content="Nadine Müller">
+    <meta name="description" content="This page helps me learn about creating tables in html5">
+    <link rel="icon" href="something.png" type="x-icon">
+    <style>
+        table,
+        tr,
+        th,
+        td,
+        caption {
+            border: 1pc solid #eee;
+            font-family: 'Courier New', Courier, monospace;
+            border-collapse: collapse;
+            padding: 0.5rem;
+        }
+    </style>
+    <title>Create tables</title>
+</head>
+
+<body>
+    <h1>How do you create tables?</h1>
+    <header>
+        <nav aria-label="primary">
+            <ul>
+                <li>
+                    <a href="#section1">Section 1</a>
+                </li>
+                <li>
+                    <a href="#section2">Section 2</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article id="section1">
+            <h2>Article 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat veniam dignissimos?
+                Cupiditate, earum eos? Soluta, accusamus necessitatibus quod facere qui quis vero dolores, illo incidunt
+                perferendis, voluptatibus tempora atque vel! Adipisci, est, esse accusamus mollitia velit ipsum id ipsam
+                cumque ad dolore rem quae iure voluptate. Sed, corrupti. Dolorum?
+            </p>
+        </article>
+        <article id="section2">
+            <h2>Article 2</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error iusto fuga autem provident modi earum
+                expedita tempore aliquam vero. Eligendi!
+            </p>
+            <aside>
+                <details>
+                    <summary>
+                        Guess something I do?
+                    </summary>
+                    <p>
+                        I start at <time datetime="06.00">6 am</Eat lunch for <time datetime="PT3H">3 hours</time> every
+                        morning.
+                    </p>
+                </details>
+            </aside>
+            <br>
+            <!-- Table element -->
+            <table>
+                <!-- add semantics: captions -->
+                <caption>My Daily Schedule</caption>
+                <!-- thead = table, only semantics -->
+                <thead>
+                    <tr>
+                        <!-- for row "headers" -->
+                        <th>&nbsp;</th>
+                        <!-- Table headers (th) -->
+                        <!-- Scope specifies what it applies to -->
+                        <th scope="col">Time</th>
+                        <th scope="col">Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- tr stands for table row -->
+                    <tr>
+                        <th scope="row">Morning</th>
+                        <!-- td is table data -->
+                        <td>
+                            <time datetime="08:00">8 am</time>-<time datetime="11:00">11 am</time>
+                        </td>
+                        <td>
+                            Code
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Break</th>
+                        <!-- td is table data -->
+                        <td>
+                            <time datetime="11:00">11 am</time>-<time datetime="12:00">12 pm</time>
+                        </td>
+                        <td>
+                            Eat lunch
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Afternoon</th>
+                        <!-- td is table data -->
+                        <td>
+                            <time datetime="12:00">12 pm</time>-<time datetime="14:00">2 pm</time>
+                        </td>
+                        <td>
+                            Study other things
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Evening</th>
+                        <!-- rowspan merges, and colspan the same for columns -->
+                        <td rowspan="2">All other times</td>
+                        <td>Free time</td>
+                        <!-- <td colspan="2">Free time</td> -->
+                    </tr>
+                    <tr>
+                        <th scope="row">Night</th>
+                        <td>Sleep</td>
+                    </tr>
+                    <!-- if we look at the inspect on the browser, the table does not take up the whole width of the page, it just takes up space for the content and then the rest on the side is margin -->
+                </tbody>
+                <tfoot>
+                    <!-- can contain something that summarizes the rows, or total row, or something like that. -->
+                    <tr>
+                        <td colspan="3">And that's what I do everyday, 5 days a week. Just eat, sleep, code and recharge
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <!-- Now instead of the scope, you can do this as well: -->
+            <table>
+                <caption>My Daily Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th id="time" scope="col">Time</th>
+                        <th scope="col">Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- then id's can be referenecs in the table data -->
+                        <th id="morning" scope="row">Morning</th>
+                        <td headers="time morning">
+                            <time datetime="08:00">8 am</time>-<time datetime="11:00">11 am</time>
+                        </td>
+                        <td>
+                            Code
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </main>
+    <footer>
+        <p>
+            &copy;<a href="https://github.com/muellernadine">Nadine Müller</a>
+        </p>
+        <p>
+            <a href="#">Back to Top</a>
+        </p>
+    </footer>
+</body>
+
+</html>

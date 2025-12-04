@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nadine Müller">
+    <meta name="description" content="Learning semantic tags">
+    <title>Semantic tags</title>
+</head>
+
+<body>
+    <!-- Only one h1 per page -->
+    <h1>Semantic tags</h1>
+    <!-- You can go down to h6 but you should have max. 3 layers -->
+    <!-- <hr> can be used for topic changes, so they're also considered semantic tags -->
+    <!-- semantic means: it provides meaning (e.g. nav -> this is a navigation area) -->
+    <!-- html makes our pages readable by page readers, very important -->
+    <!-- there can be more headers than one per page, but be careful, e.g. a header can be per post, but this one is for our page -->
+    <header>
+        <!-- important to label nav in case of multiple navs, for screen readers, navs can also be at the bottom of the page -->
+        <nav aria-label="primary">
+            <ul>
+                <li><a href="#one">Link 1</a></li>
+                <li><a href="#two">Link 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- there can only be one main per page -->
+    <main>
+        <!-- article or section can both be used here properly, article can be more clear cut as a separate content and topic whereas a section is more loosely defined. -->
+        <article id="one">
+            <h2>Article 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sed commodi est ipsum mollitia? Magnam
+                doloremque et inventore iure numquam, nam, illum facilis sint officia cumque, quidem iste repellat
+                voluptates!
+            </p>
+            <section>
+                <h3>Test HTML</h3>
+                <code>&lt;tag&gt;</code>
+            </section>
+        </article>
+        <article id="two">
+            <h2>Article 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptatem ea similique id labore non.
+                Ratione itaque tempora sapiente delectus facilis fuga nam, eaque iure ex, eligendi quisquam. Aperiam
+                ut
+                voluptate mollitia sunt fugit corporis, et laboriosam saepe aspernatur fugiat id nesciunt dolorem
+                tempore a commodi non nihil! Quaerat, non.</p>
+            <!-- oftentimes an aside is thought of as a side bar, but it can also be additional information that is not "as important" as the main content of the page -->
+            <aside>
+                <!-- inside a detials, you put a summary element,  -->
+                <details>
+                    <summary>
+                        Guess the <mark>number</mark> of hours I code per day?
+                    </summary>
+                    <!-- the paragraph is now collapsible within the summary-phrase -->
+                    <p>I start at <time datetime="08:00">8 am</time> and I write code for <time datetime="PT3H">3
+                            hours</time> every morning.</p>
+                </details>
+            </aside>
+        </article>
+        <article id="three">
+            <section>
+                <h2>Article three</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat sed deleniti in cupiditate
+                    obcaecati recusandae eos nisi nulla molestiae. Earum minus saepe accusamus! Autem nisi voluptates
+                    magni in suscipit minus officia cum, eligendi repudiandae beatae aliquam distinctio enim labore
+                    debitis quo eum commodi, voluptatibus sed exercitationem nesciunt soluta optio! Natus magnam, magni
+                    tempora exercitationem beatae amet et. Tenetur sint unde a, incidunt accusantium laboriosam,
+                    necessitatibus similique ex fugiat, repellendus laudantium aut! Repellendus modi, aspernatur
+                    officiis nisi fuga earum dolorem eaque magnam quisquam vitae, sequi reiciendis aperiam impedit culpa
+                    sint quas nam? Dolorem repellat sapiente minus ut rem obcaecati qui fugiat.</p>
+            </section>
+            <!-- avoid as you learn HTML: div-elements, this has no semantic meaning, it is useful with css parsing, but it takes a lot of effort to add meaning to div-elements -->
+            <!-- also span has not semantic meaning, and has no value to the HTML-code, it is used to apply styling to words -->
+        </article>
+    </main>
+
+    <!-- like header, there can be multiple, but this one here is only for our page, so there's only one -->
+    <footer>
+        <p>
+            &lt;&lt;&lt; &copy;<a href="https://github.com/muellernadine">Nadine Müller</a>&gt;&gt;&gt;
+        </p>
+        <p>
+            <a href="#">Back to Top</a>
+        </p>
+    </footer>
+</body>
+
+</html>

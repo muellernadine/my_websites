@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nadine">
+    <meta name="description" content="This website teaches me how to use images in HTML.">
+    <link rel="icon" href="some-pic.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <title>Images in HTML</title>
+</head>
+
+<body>
+    <h1>Holiday plans</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="#January">January</a>
+            </li>
+            <li>
+                <a href="#notes">Notes on HTML</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="January">
+        <h2>January</h2>
+        <p>
+            In January nothing is planned. I will be dreaming about:
+        <ul>
+            <li>Beach</li>
+            <li>Spring</li>
+        </ul>
+        An image tag is inline and does not have an end tag.
+        <figure>
+            <!-- Figure connects img with figcaption, image is automatically slightly indented -->
+            <img src="conure.png" alt="A picture of a conure" title="I am learning about conures." width="200"
+                height="150" loading="lazy">
+            <figcaption>
+                Conure drawing
+            </figcaption>
+        </figure>
+        The title attribute appears when hovering.<br>
+        It is recommended to put height and width even if it is later overriden by css. This is cumulative layout shift.
+        It avoids the website from "shifting" around when popup or others appear. It just gives the browser an idea of
+        how big the image is.
+        <figure>
+            <figcaption>
+                An examplte of HTML5 code
+            </figcaption>
+            <p>
+                <code>&lt;h1&gt; Hello world &lt;/h1&gt;</code>
+            </p>
+        </figure>
+        Any image below "the fold" (content below the initial view) can be set to loading="lazy"
+    </section>
+
+    <hr>
+
+    <section id="notes">
+        <p>
+            <img src="conure.png" alt="A picture of a conure" title="I am learning about conures" width="220"
+                height="180">
+            <!-- Unsplash to get "free" usage pictures. or Pexels.com gratisography.com pixabay.com -> IrfanView to have minimal software to downscale a picture -->
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="address">
+        <p>
+            Here is an address:
+        </p>
+        <address>
+            Max Muster <br>
+            Musterstrasse 1 <br>
+            8001 Musterstadt
+        </address>
+        <figure>
+            <!-- Figure is not just for images -->
+            <img src="conure.png" alt="Another conure picture" title="This is a conure" loading="lazy" height="200"
+                width="1000">
+            <figcaption>
+                A random address of a non existent person
+            </figcaption>
+        </figure>
+    </section>
+</body>
+
+</html>

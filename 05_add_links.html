@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta author="Nadine">
+    <meta description="This describes my site.">
+    <link rel="icon" href="some_icon.png" type="image/x-icon">
+    <title>Lesson 4</title>
+</head>
+
+<body>
+    <section id="links">
+        <h1>This is lesson on adding links <abbr title="also known as">a.k.a.</abbr> &lt;a&gt;-tags</h1>
+        <hr>
+
+        <nav>
+            <!-- Navigation area, right after h1 -->
+            <ul>
+                <li>
+                    <a href="#links">Learn how to add links</a>
+                </li>
+                <li>
+                    <a href="#anchors">Learn about anchors</a>
+                </li>
+            </ul>
+        </nav>
+        <p>
+            Let me tell you about a thing. It has to do with the
+            <!-- This href is an absolute reference. -->
+            <abbr title="Mozilla Developer Network"><a href="https://developer.mozilla.org/en-US/">MDN</a></abbr>
+            <br>
+            To add a relative <a href="/04_list_types/index.html">link</a>.
+            Here, I tell you about naming conventions: <br>
+            A short description only for links, never the actual website/file <br>
+            Link texts should be as short as possible. <br>
+            Never just say "Click here", since it's not informative and a screen reader also struggles.
+        </p>
+    </section>
+    <section id="anchors">
+        <p>
+            This is gonna be an anchor link to a portion of page. <br>
+            To use this, content needs to be in sections.
+        </p>
+    </section>
+    <br>
+    <secion>
+        <ul>
+            <li>
+                Download a picture of a <a href="conure.png" download>conure</a>
+            </li>
+            <li>
+                (Not advised, because of email harvesting) Contact me at <a href="mailto:test@example.com">my email
+                    address</a>.
+            </li>
+            <li>
+                Dial <a href="tel:+41 123 45 67">my phone number</a>
+            </li>
+            <li>
+                <a href="https://www.google.com" target="_blank">absolute reference to Google</a>
+            </li>
+        </ul>
+    </secion>
+    <p>
+        <a href="#">Back to Top</a>
+    </p>
+    <p>
+        <a href="/">Back to Home</a>
+    </p>
+</body>
+
+</html>
