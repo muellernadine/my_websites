@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nadine Müller">
+    <meta name="description" content="This website marks my learnings from the lesson on forms and inputs.">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <title>Forms and Inputs</title>
+</head>
+
+<body>
+    <header>
+        <h1>Forms and Input</h1>
+        <nav>
+            <ul>
+                <li><a href="#one">Article 1</a></li>
+                <li><a href="#two">Article 2</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="one">
+            <h2>This is Article one</h2>
+            <p>As I am writing this, I have not yet decided what to put in here. I guess somewhere there will be a form
+                or
+                an input field.</p>
+        </article>
+        <article id="two">
+            <h2>This is Article two</h2>
+            <p>Also somewhere here, there will be a form or an input.</p>
+        </article>
+
+        <article id="contact">
+            <h2>Contact Me</h2>
+            <p>I'd really like to hear from you! (Most likely I will not receive your request though)</p>
+            <!-- action specifies where it should get sent to. Get refers to method we use. -->
+            <form action="https://httpbin.org/get" method="get">
+                <p>
+                    <label for="firstName">First name:</label>
+                    <!-- match name="" and id -->
+                    <!-- id is required to match to the for in the label. The name attribute is hwo the server recorgnizes this. -->
+                    <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required
+                        autofocus>
+                </p>
+                <!-- wrap in paragraph to get block element -->
+                <p>
+                    <!-- Autocomplete makes forms remember things you've already input 
+                autofocus sets the initial focus when loading the page-->
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Doe" autocomplete="on" required>
+                </p>
+                <p>
+                    <!-- Autocomplete makes forms remember things you've already input 
+                autofocus sets the initial focus when loading the page-->
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" placeholder="example@exameple.com" autocomplete="on"
+                        required>
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="your secret" required>
+                </p>
+                <p>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" id="phone" placeholder="0791234567" pattern="[0-9]{10}" required>
+                </p>
+                <p>
+                    <label for="decade">Favorite decade:</label>
+                    <input type="number" name="decase" id="decade" min="1910" max="2020" step="10" value="1980">
+                </p>
+                <p>
+                    <label for="coffee">Favorite Coffee:</label>
+                    <!-- size dictates how many are visible on the site (only applicable for multiple) -->
+                    <select name="coffee" id="coffee" multiple size="5">
+                        <!-- To group the choices, use optgroup -->
+                        <optgroup label="Coffees">
+                            <option value="regular coffee">Regular Coffee</option>
+                            <option value="iced coffee">Iced Coffee</option>
+                        </optgroup>
+                        <!-- add attribute selected to the option that should pre-select -->
+                        <optgroup label="Espresso Drinks">
+                            <option value="Latte" selected>Latte</option>
+                            <option value="cappuccino">Cappucino</option>
+                            <option value="cortado">Cortado</option>
+                            <option value="americano">Americano</option>
+                        </optgroup>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+            </form>
+        </article>
+    </main>
+</body>
+
+</html>
