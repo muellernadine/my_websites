@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nadine Müller">
+    <meta name="description"
+        content="This page summarizes all I have learnt about CSS. It is supposed to be as complete of a summary as is feasible.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CSS Mastersheet</title>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Mastersheet</h1>
+        <nav>
+            <ul>
+                <li><a href="#basics">Basics</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="basics">
+            <h2>1. Basics</h2>
+            <p>
+                <abbr title="Cascading Styling Sheets">CSS</abbr> is used to style and design documents. Most often it
+                is used to design HTML documents.
+            </p>
+            <section>
+                <h3>1.1 Adding CSS</h3>
+                <p>
+                    CSS can be included in HTML in three ways:
+                <ol>
+                    <li>
+                        <strong>Inline CSS</strong>: <br>
+                        Inserted directly in the HTML tag. <br>
+                        Example: <br>
+                        <code><mark class="htmlCode">&lt;h1 style="</mark><mark class="cssCode">color: red</mark>"<mark class="htmlCode">&gt;Heading&lt;/h1&gt;</mark></code>
+                    </li>
+                    <li><strong>Internal CSS</strong>: <br>
+                        Embedded in the <code><mark class="htmlCode">&lt;head&gt;</mark></code> using the tag
+                        <code><mark class="htmlCode">&lt;style&gt;</mark></code><br>
+                        Example: <br>
+                        <code><mark class="htmlCode">&lt;head&gt;<br>&lt;style&gt;</mark><mark class="cssCode">h1 &#123;<br>color: red; <br>background-color: yellow <br>&#125;</mark><mark class="htmlCode"><br>&lt;/style&gt;<br>&lt;/head&gt;<br></mark></code>
+                    </li>
+                    <li><strong>External CSS</strong>: <br>
+                        Refers to a separate file by linking it, typically within the <code
+                            class="htmlCode">&lt;head&gt;</code>.
+                        Best practice for clean code. <br>
+                        Example: <br>
+                        <code><mark class="htmlCode">&lt;link rel="stylesheet" href="css/style.css"&gt;</mark></code>
+                    </li>
+                </ol>
+                </p>
+            </section>
+            <section>
+                <h3>1.2 CSS Cascade</h3>
+                <p>
+                    The cascade in CSS is the algorithm that defines how different CSS sources are managed and
+                    prioritized.
+                </p>
+            </section>
+
+        </section>
+    </main>
+</body>
+
+</html>
